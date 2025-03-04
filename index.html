@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/3ea6eab292cd9.js" 
-        data-cmp-host="b.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16">
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DVIUS Fun</title>
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WFSBP9TSN7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-WFSBP9TSN7');
-</script>
+    <!-- GDPR Consent Manager -->
+    <script type="text/javascript" data-cmp-ab="1" 
+        src="https://cdn.consentmanager.net/delivery/autoblocking/3ea6eab292cd9.js"
+        data-cmp-host="b.delivery.consentmanager.net"
+        data-cmp-cdn="cdn.consentmanager.net"
+        data-cmp-codesrc="16">
+    </script>
+
+    <!-- Google Analytics: Runs Only If Consent is Granted -->
+    <script>
+      function loadGoogleAnalytics() {
+          var consentGiven = window.consentManager && window.consentManager.getConsentState;
+          if (consentGiven && window.consentManager.getConsentState().hasConsent) {
+              var script = document.createElement('script');
+              script.async = true;
+              script.src = "https://www.googletagmanager.com/gtag/js?id=G-WFSBP9TSN7";
+              document.head.appendChild(script);
+
+              script.onload = function () {
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'G-WFSBP9TSN7');
+              };
+          }
+      }
+
+      // Wait for consent to be checked before loading GA
+      document.addEventListener("DOMContentLoaded", function () {
+          setTimeout(loadGoogleAnalytics, 1000); // Delay for consent manager to initialize
+      });
+    </script>
+</head>
 <body>
     <h1>Welcome to DVIUS Fun!</h1>
     <p>Your source for custom 3D printed jewelry and accessories.</p>
