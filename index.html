@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>DVIUS Fun | Alternative Jewelry and Accessories</title>
+    <title>DVIUS Fun | Alternative, Gender-Affirming Jewelry</title>
 
     <meta
         name="description"
-        content="Alternative jewelry, handmade accessories, wearable art, and 3D-printed creations from DVIUS Fun."
+        content="Alternative, gender-neutral and gender-affirming jewelry, accessories, wearable art, and custom-sized creations from DVIUS Fun."
     >
 
     <meta name="theme-color" content="#0d0d12">
@@ -16,23 +16,19 @@
 
     <link rel="canonical" href="https://dvius.fun/">
 
-    <!-- Favicons: these will begin working once real image files are uploaded -->
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-    <!-- Social sharing -->
     <meta property="og:title" content="DVIUS Fun">
     <meta
         property="og:description"
-        content="Alternative jewelry, handmade accessories, wearable art, and 3D-printed creations."
+        content="Alternative, gender-neutral and gender-affirming jewelry, accessories, wearable art, and custom-sized creations."
     >
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dvius.fun/">
     <meta property="og:site_name" content="DVIUS Fun">
-
-    <!-- Enable this after uploading social-preview.png -->
     <meta property="og:image" content="https://dvius.fun/social-preview.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -45,7 +41,7 @@
     <meta name="twitter:title" content="DVIUS Fun">
     <meta
         name="twitter:description"
-        content="Alternative jewelry, handmade accessories, wearable art, and 3D-printed creations."
+        content="Alternative, gender-neutral and gender-affirming jewelry, accessories, wearable art, and custom-sized creations."
     >
     <meta name="twitter:image" content="https://dvius.fun/social-preview.png">
 
@@ -53,7 +49,7 @@
         :root {
             --background: #0d0d12;
             --background-highlight: #201126;
-            --surface: rgba(30, 26, 35, 0.92);
+            --surface: rgba(30, 26, 35, 0.94);
             --surface-hover: #292130;
             --text: #f8f5fa;
             --muted: #bbb1c2;
@@ -62,7 +58,7 @@
             --accent-text: #1b0d1e;
             --border: rgba(255, 255, 255, 0.12);
             --focus: #f0b6ff;
-            --maximum-width: 680px;
+            --maximum-width: 760px;
         }
 
         * {
@@ -71,6 +67,7 @@
 
         html {
             min-height: 100%;
+            scroll-behavior: smooth;
             background: var(--background);
         }
 
@@ -105,11 +102,8 @@
 
         .page {
             width: min(var(--maximum-width), calc(100% - 32px));
-            min-height: 100vh;
             margin: 0 auto;
             padding: 48px 0 32px;
-            display: flex;
-            flex-direction: column;
         }
 
         .hero {
@@ -145,12 +139,14 @@
             text-transform: uppercase;
         }
 
-        .subtitle {
-            margin: 18px auto 0;
-            max-width: 560px;
-            color: var(--muted);
+        h2 {
+            margin: 0;
+            font-size: clamp(1.55rem, 5vw, 2rem);
+        }
+
+        h3 {
+            margin: 0 0 8px;
             font-size: 1.05rem;
-            line-height: 1.65;
         }
 
         .identity {
@@ -162,8 +158,38 @@
             text-transform: uppercase;
         }
 
+        .subtitle {
+            margin: 18px auto 0;
+            max-width: 620px;
+            color: var(--muted);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .quick-links {
+            margin: 36px 0 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .quick-links a {
+            padding: 9px 13px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .quick-links a:hover {
+            border-color: var(--accent);
+            color: var(--text);
+        }
+
         .links {
-            margin-top: 38px;
+            margin-top: 32px;
             display: grid;
             gap: 14px;
         }
@@ -194,7 +220,8 @@
             transform: translateY(-2px);
         }
 
-        .button:focus-visible {
+        .button:focus-visible,
+        .quick-links a:focus-visible {
             outline: 3px solid var(--focus);
             outline-offset: 3px;
         }
@@ -220,7 +247,6 @@
             width: 24px;
             text-align: center;
             font-size: 1.1rem;
-            line-height: 1;
         }
 
         .button-arrow {
@@ -228,28 +254,97 @@
             font-size: 1.2rem;
         }
 
-        .about {
-            margin-top: 48px;
-            padding-top: 34px;
+        .content-section {
+            margin-top: 60px;
+            padding-top: 42px;
             border-top: 1px solid var(--border);
+        }
+
+        .content-section > p {
+            margin: 16px 0 0;
+            color: var(--muted);
+            line-height: 1.75;
+        }
+
+        .section-intro {
+            max-width: 650px;
+        }
+
+        .cards {
+            margin-top: 26px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .card {
+            padding: 20px;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            background: var(--surface);
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .product-list {
+            margin: 24px 0 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            list-style: none;
+        }
+
+        .product-list li {
+            padding: 16px 18px;
+            border: 1px solid var(--border);
+            border-radius: 13px;
+            background: var(--surface);
+            color: var(--text);
+        }
+
+        .product-list li::before {
+            content: "✦";
+            margin-right: 10px;
+            color: var(--accent);
+        }
+
+        .callout {
+            margin-top: 28px;
+            padding: 22px;
+            border: 1px solid rgba(217, 105, 255, 0.45);
+            border-radius: 15px;
+            background: rgba(217, 105, 255, 0.08);
+        }
+
+        .callout strong {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--accent-hover);
+        }
+
+        .callout p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.65;
+        }
+
+        .contact-section {
             text-align: center;
         }
 
-        .about h2 {
-            margin: 0;
-            font-size: 1.35rem;
-        }
-
-        .about p {
-            margin: 14px auto 0;
-            max-width: 560px;
-            color: var(--muted);
-            line-height: 1.7;
+        .contact-section .button {
+            margin-top: 24px;
         }
 
         footer {
-            margin-top: auto;
-            padding-top: 56px;
+            margin-top: 64px;
+            padding-top: 34px;
+            border-top: 1px solid var(--border);
             text-align: center;
             color: var(--muted);
             font-size: 0.85rem;
@@ -271,7 +366,7 @@
             text-underline-offset: 3px;
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 600px) {
             .page {
                 padding-top: 34px;
             }
@@ -282,16 +377,20 @@
                 margin-bottom: 20px;
             }
 
-            .subtitle {
-                font-size: 1rem;
+            .cards,
+            .product-list {
+                grid-template-columns: 1fr;
             }
         }
 
         @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
             *,
             *::before,
             *::after {
-                scroll-behavior: auto !important;
                 transition: none !important;
             }
         }
@@ -301,17 +400,6 @@
 <body>
     <main class="page">
         <section class="hero" aria-labelledby="site-title">
-
-            <!--
-                This text-based logo prevents a broken image while no logo
-                file is uploaded. Later, replace this entire div with:
-
-                <img
-                    class="brand-logo"
-                    src="/logo.png"
-                    alt="DVIUS Fun logo"
-                >
-            -->
             <div class="brand-mark" aria-hidden="true">
                 <span>DVIUS</span>
             </div>
@@ -319,17 +407,23 @@
             <h1 id="site-title">DVIUS</h1>
 
             <p class="identity">
-                Alternative · Handmade · Rave
+                Alternative · Handmade · Gender Affirming
             </p>
 
             <p class="subtitle">
-                Distinctive jewelry, wearable art, accessories, and
-                3D-printed creations for people who prefer something
-                stranger.
+                Gender-neutral jewelry, wearable art, accessories, and
+                3D-printed creations made for expression rather than rules.
             </p>
+
+            <nav class="quick-links" aria-label="Page sections">
+                <a href="#about">About</a>
+                <a href="#made-to-order">Made to order</a>
+                <a href="#sizing">Custom sizing</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </section>
 
-        <nav class="links" aria-label="DVIUS links">
+        <nav class="links" aria-label="DVIUS external links">
             <a
                 class="button primary"
                 href="https://dviusfun.etsy.com"
@@ -368,27 +462,144 @@
                 </span>
                 <span class="button-arrow" aria-hidden="true">→</span>
             </a>
+        </nav>
+
+        <section class="content-section" id="about">
+            <h2>About DVIUS</h2>
+
+            <p class="section-intro">
+                DVIUS is an independent creative business based in the
+                Netherlands, making alternative jewelry and accessories for
+                people who want pieces that feel personal, expressive, and
+                unapologetically different.
+            </p>
+
+            <p>
+                The work draws from gothic, fantasy, rave, queer, and
+                alternative aesthetics. Pieces may combine handmade
+                components, altered findings, and 3D-printed elements to
+                create designs that are difficult to find through
+                conventional jewelry shops.
+            </p>
+        </section>
+
+        <section class="content-section" id="made-to-order">
+            <h2>Made to order</h2>
+
+            <p class="section-intro">
+                Selected designs can be made again on request, subject to
+                material and component availability.
+            </p>
+
+            <!-- Replace or expand this list with Tru's confirmed products. -->
+            <ul class="product-list">
+                <li>Necklaces and chokers</li>
+                <li>Earrings and ear accessories</li>
+                <li>Bracelets and anklets</li>
+                <li>Chains and body accessories</li>
+                <li>3D-printed jewelry</li>
+                <li>Modified and embellished accessories</li>
+                <li>Wearable fantasy pieces</li>
+                <li>Small-batch custom designs</li>
+            </ul>
+
+            <div class="callout">
+                <strong>Availability varies.</strong>
+                <p>
+                    Some components are limited, discontinued, vintage, or
+                    sourced in small quantities. A recreated piece may have
+                    minor differences while preserving the original design.
+                </p>
+            </div>
+        </section>
+
+        <section class="content-section" id="sizing">
+            <h2>Custom sizing</h2>
+
+            <p class="section-intro">
+                Bodies are not standard sizes, and jewelry should not assume
+                that they are.
+            </p>
+
+            <div class="cards">
+                <article class="card">
+                    <h3>Adjusted lengths</h3>
+                    <p>
+                        Necklace, choker, bracelet, anklet, and chain lengths
+                        may be adjusted where the design permits.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Extended sizing</h3>
+                    <p>
+                        Longer chains, larger closures, and alternative fits
+                        can be discussed before ordering.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Comfort and accessibility</h3>
+                    <p>
+                        Different fasteners, lighter components, or other
+                        practical adjustments may be possible.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Ask before ordering</h3>
+                    <p>
+                        Send measurements and the desired fit so feasibility
+                        and any price difference can be confirmed.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Gender-neutral and gender-affirming</h2>
+
+            <p class="section-intro">
+                DVIUS designs are not divided into “men’s” and “women’s”
+                jewelry. Pieces are made for whoever connects with them.
+            </p>
+
+            <p>
+                Custom work can support gender expression, affirmation, and
+                personal milestones. That may mean changing proportions,
+                scale, styling, symbolism, colors, or fit so that a piece
+                feels right for the person wearing it.
+            </p>
+
+            <div class="callout">
+                <strong>No justification required.</strong>
+                <p>
+                    Customers do not need to explain their identity or body.
+                    Describe the look, fit, and feeling wanted, and DVIUS will
+                    determine what can be made.
+                </p>
+            </div>
+        </section>
+
+        <section class="content-section contact-section" id="contact">
+            <h2>Custom orders and questions</h2>
+
+            <p class="section-intro">
+                Include the type of item, preferred style, measurements,
+                timing, and approximate budget. Reference images are useful
+                when discussing a custom piece.
+            </p>
 
             <a
-                class="button"
-                href="mailto:contact@dvius.fun"
+                class="button primary"
+                href="mailto:contact@dvius.fun?subject=DVIUS%20custom%20order%20inquiry"
             >
                 <span class="button-label">
                     <span class="button-icon" aria-hidden="true">✉</span>
-                    Contact and Custom Orders
+                    Contact DVIUS
                 </span>
                 <span class="button-arrow" aria-hidden="true">→</span>
             </a>
-        </nav>
-
-        <section class="about" aria-labelledby="about-heading">
-            <h2 id="about-heading">Wear something unusual.</h2>
-
-            <p>
-                DVIUS creates small-batch pieces inspired by alternative,
-                gothic, fantasy, and rave aesthetics. Based in the
-                Netherlands.
-            </p>
         </section>
 
         <footer>
