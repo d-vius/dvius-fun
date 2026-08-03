@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DVIUS — Alternative Accessories & 3D-Printed Creations</title>
+
+  <meta
+    name="description"
+    content="Alternative jewelry, accessories, and 3D-printed creations handmade in the Netherlands."
+  >
+
+  <meta property="og:title" content="DVIUS">
+  <meta
+    property="og:description"
+    content="Alternative jewelry, accessories, and 3D-printed creations handmade in the Netherlands."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dvius.fun">
+
+  <style>
+    :root {
+      --background: #0d0b10;
+      --surface: #19151e;
+      --text: #f5f1f7;
+      --muted: #b9aebe;
+      --accent: #d474ff;
+      --accent-hover: #e29aff;
+      --border: #352b3b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background:
+        radial-gradient(circle at top, #25172d 0, var(--background) 45%);
+      color: var(--text);
+    }
+
+    main {
+      width: min(680px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 72px 0 48px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 112px;
+      height: 112px;
+      margin: 0 auto 24px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      object-fit: cover;
+      background: var(--surface);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(3rem, 12vw, 5rem);
+      letter-spacing: 0.08em;
+      line-height: 1;
+    }
+
+    .tagline {
+      margin: 18px auto 36px;
+      max-width: 520px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .links {
+      display: grid;
+      gap: 14px;
+    }
+
+    .button {
+      display: block;
+      padding: 17px 20px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--surface);
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 650;
+      transition:
+        transform 150ms ease,
+        border-color 150ms ease,
+        background 150ms ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      background: #211927;
+    }
+
+    .button.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #150c18;
+    }
+
+    .button.primary:hover,
+    .button.primary:focus-visible {
+      background: var(--accent-hover);
+    }
+
+    .section {
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    .section h2 {
+      margin-bottom: 10px;
+      font-size: 1.25rem;
+    }
+
+    .section p {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    footer {
+      margin-top: 56px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <!-- Replace logo.jpg with your own image -->
+    <img class="logo" src="logo.jpg" alt="DVIUS logo">
+
+    <h1>DVIUS</h1>
+
+    <p class="tagline">
+      Alternative jewelry, accessories, and 3D-printed creations
+      handmade in the Netherlands.
+    </p>
+
+    <nav class="links" aria-label="DVIUS links">
+      <!-- Replace each # with the real destination -->
+      <a class="button primary" href="#" target="_blank" rel="noopener">
+        Shop on Etsy
+      </a>
+
+      <a class="button" href="#" target="_blank" rel="noopener">
+        Follow on Instagram
+      </a>
+
+      <a class="button" href="#" target="_blank" rel="noopener">
+        Watch on TikTok
+      </a>
+
+      <a class="button" href="mailto:hello@dvius.fun">
+        Custom Orders & Contact
+      </a>
+    </nav>
+
+    <section class="section">
+      <h2>Wear something unusual.</h2>
+      <p>
+        Jewelry, wearable art, altered accessories, and small-batch
+        creations for people who prefer things a little stranger.
+      </p>
+    </section>
+
+    <footer>
+      <p>© 2026 DVIUS</p>
+      <p>
+        <a href="/privacy.html">Privacy</a>
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
