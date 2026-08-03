@@ -1,46 +1,329 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DVIUS Fun</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- GDPR Consent Manager -->
-    <script type="text/javascript" data-cmp-ab="1" 
+    <title>DVIUS | Alternative Jewelry & 3D Printed Creations</title>
+
+    <meta name="description"
+          content="Alternative jewelry, accessories, and 3D printed creations handmade in the Netherlands.">
+
+    <meta property="og:title" content="DVIUS">
+    <meta property="og:description"
+          content="Alternative jewelry, accessories, and 3D printed creations handmade in the Netherlands.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dvius.fun">
+
+    <!-- Consent Manager -->
+    <script
+        type="text/javascript"
+        data-cmp-ab="1"
         src="https://cdn.consentmanager.net/delivery/autoblocking/3ea6eab292cd9.js"
         data-cmp-host="b.delivery.consentmanager.net"
         data-cmp-cdn="cdn.consentmanager.net"
         data-cmp-codesrc="16">
     </script>
 
-    <!-- Google Analytics: Runs Only If Consent is Granted -->
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WFSBP9TSN7"></script>
+
     <script>
-      function loadGoogleAnalytics() {
-          var consentGiven = window.consentManager && window.consentManager.getConsentState;
-          if (consentGiven && window.consentManager.getConsentState().hasConsent) {
-              var script = document.createElement('script');
-              script.async = true;
-              script.src = "https://www.googletagmanager.com/gtag/js?id=G-WFSBP9TSN7";
-              document.head.appendChild(script);
+        window.dataLayer = window.dataLayer || [];
 
-              script.onload = function () {
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', 'G-WFSBP9TSN7');
-              };
-          }
-      }
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
-      // Wait for consent to be checked before loading GA
-      document.addEventListener("DOMContentLoaded", function () {
-          setTimeout(loadGoogleAnalytics, 1000); // Delay for consent manager to initialize
-      });
+        gtag('js', new Date());
+        gtag('config', 'G-WFSBP9TSN7');
     </script>
+
+    <style>
+
+        :root {
+            --background:#0f0d12;
+            --surface:#1b1720;
+            --surface-hover:#241d2a;
+
+            --text:#f8f5fa;
+            --muted:#b8afc0;
+
+            --accent:#cf73ff;
+            --accent-hover:#e09dff;
+
+            --border:#342b3b;
+        }
+
+        *{
+            box-sizing:border-box;
+        }
+
+        body{
+            margin:0;
+
+            font-family:
+                Inter,
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            color:var(--text);
+
+            background:
+                radial-gradient(circle at top,
+                #281833 0%,
+                var(--background) 45%);
+        }
+
+        main{
+
+            width:min(700px,calc(100% - 32px));
+
+            margin:auto;
+
+            min-height:100vh;
+
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+
+            padding:48px 0;
+        }
+
+        .logo{
+
+            width:140px;
+            height:140px;
+
+            margin:auto;
+
+            border-radius:50%;
+
+            object-fit:cover;
+
+            background:var(--surface);
+
+            border:1px solid var(--border);
+        }
+
+        h1{
+
+            margin:28px 0 10px;
+
+            text-align:center;
+
+            font-size:clamp(3rem,10vw,5rem);
+
+            letter-spacing:.10em;
+        }
+
+        .tagline{
+
+            margin:auto;
+
+            max-width:560px;
+
+            text-align:center;
+
+            color:var(--muted);
+
+            line-height:1.7;
+
+            font-size:1.05rem;
+        }
+
+        .links{
+
+            margin-top:40px;
+
+            display:grid;
+
+            gap:14px;
+        }
+
+        .button{
+
+            display:block;
+
+            padding:18px;
+
+            text-align:center;
+
+            text-decoration:none;
+
+            color:white;
+
+            border-radius:14px;
+
+            border:1px solid var(--border);
+
+            background:var(--surface);
+
+            transition:.2s;
+        }
+
+        .button:hover{
+
+            background:var(--surface-hover);
+
+            border-color:var(--accent);
+
+            transform:translateY(-2px);
+        }
+
+        .primary{
+
+            background:var(--accent);
+
+            border-color:var(--accent);
+
+            color:#1c1020;
+
+            font-weight:700;
+        }
+
+        .primary:hover{
+
+            background:var(--accent-hover);
+        }
+
+        section{
+
+            margin-top:56px;
+
+            border-top:1px solid var(--border);
+
+            padding-top:36px;
+
+            text-align:center;
+        }
+
+        section h2{
+
+            margin-bottom:12px;
+        }
+
+        section p{
+
+            color:var(--muted);
+
+            line-height:1.7;
+        }
+
+        footer{
+
+            margin-top:60px;
+
+            text-align:center;
+
+            color:var(--muted);
+
+            font-size:.85rem;
+        }
+
+        footer a{
+
+            color:inherit;
+        }
+
+    </style>
+
 </head>
+
 <body>
-    <h1>Welcome to DVIUS Fun!</h1>
-    <p>Your source for custom 3D printed jewelry and accessories.</p>
-    <p>Contact us at: <a href="mailto:contact@dvius.fun">contact@dvius.fun</a></p>
+
+<main>
+
+    <!-- Replace with your logo -->
+
+    <img
+        class="logo"
+        src="logo.jpg"
+        alt="DVIUS Logo">
+
+    <h1>DVIUS</h1>
+
+    <p class="tagline">
+
+        Alternative jewelry, wearable art, accessories, and 3D printed
+        creations inspired by gothic, fantasy, rave, and alternative aesthetics.
+
+    </p>
+
+    <nav class="links">
+
+        <a
+            class="button primary"
+            href="https://etsy.com/shop/YOURSHOP"
+            target="_blank"
+            rel="noopener">
+
+            Shop on Etsy
+
+        </a>
+
+        <a
+            class="button"
+            href="https://instagram.com/YOURACCOUNT"
+            target="_blank"
+            rel="noopener">
+
+            Instagram
+
+        </a>
+
+        <a
+            class="button"
+            href="https://tiktok.com/@YOURACCOUNT"
+            target="_blank"
+            rel="noopener">
+
+            TikTok
+
+        </a>
+
+        <a
+            class="button"
+            href="mailto:contact@dvius.fun">
+
+            Contact / Custom Orders
+
+        </a>
+
+    </nav>
+
+    <section>
+
+        <h2>Wear Something Unusual</h2>
+
+        <p>
+
+            DVIUS creates distinctive accessories and jewelry for people
+            who appreciate darker aesthetics, handmade craftsmanship,
+            and small-batch designs.
+
+        </p>
+
+    </section>
+
+    <footer>
+
+        <p>© 2026 DVIUS</p>
+
+        <p>
+
+            <a href="/privacy.html">
+                Privacy Policy
+            </a>
+
+        </p>
+
+    </footer>
+
+</main>
+
 </body>
 </html>
